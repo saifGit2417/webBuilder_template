@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import NavigationBarTop from "./UiComponents/navbar/Navbar";
+import Socials from "./UiComponents/socialMediaLinks/Socials";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,8 +31,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NavigationBarTop/>
+        <NavigationBarTop />
         {children}
+        <Socials />
       </body>
     </html>
   );
